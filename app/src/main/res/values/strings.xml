@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">ExtendArrayAdapter</string>
+    <string name="app_name" translatable="false">ExtendArrayAdapter</string>
+    <string name="code_id_text">This is in English</string>
+    <string name="six_text">six</string>
 </resources>

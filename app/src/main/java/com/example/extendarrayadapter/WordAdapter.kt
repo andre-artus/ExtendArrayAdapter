@@ -18,11 +18,17 @@ class WordAdapter(context: Context, objects: List<Word>) :
         val miwokTextView = row.findViewById<TextView>(R.id.miwok_text_view)!!
     }
 
+    private val translatedString = context.getString(R.string.six_text)
+
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View =
         super.getView(position, convertView, parent).also { row ->
             (row.tag as? ViewHolder ?: ViewHolder(row)).apply {
                 getItem(position)?.run {
-                    defaultTextView.text = defaultTranslation
+                    defaultTextView.text = when (defaultTranslation) {
+                        "six" -> translatedString
+                        else -> defaultTranslation
+                    }
+
                     miwokTextView.text = miwokTranslation
                 }
             }

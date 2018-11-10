@@ -4,6 +4,13 @@
               android:layout_width="match_parent" android:layout_height="match_parent"
               android:orientation="vertical">
 
+
+    <TextView
+            android:text="@string/code_id_text"
+            android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content" android:id="@+id/code_id"/>
+
     <TextView
             tools:text="default_text_view"
             android:layout_width="match_parent"
